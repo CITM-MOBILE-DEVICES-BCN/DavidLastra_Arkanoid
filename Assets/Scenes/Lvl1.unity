@@ -1974,9 +1974,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 278087373}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 26, y: 428.1001}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 26, y: -44}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &662581365
@@ -3217,9 +3217,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 278087373}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 20.000015, y: 427}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 20, y: -49}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1043394062
@@ -4048,6 +4048,9 @@ MonoBehaviour:
   livesText: {fileID: 1549768522}
   highScoreText: {fileID: 1043394062}
   playerMovement: {fileID: 1890409617}
+  currentScore: 0
+  currentLives: 0
+  highScore: 0
 --- !u!4 &1483124132
 Transform:
   m_ObjectHideFlags: 0
@@ -4315,7 +4318,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 14, y: -11.999939}
+  m_AnchoredPosition: {x: 14, y: -12.000061}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1549768522

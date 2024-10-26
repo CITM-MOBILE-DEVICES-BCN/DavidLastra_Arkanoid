@@ -1166,6 +1166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPausing: 0
   uiManager: {fileID: 1235787544}
+  isSaved: 0
 --- !u!4 &1058932898
 Transform:
   m_ObjectHideFlags: 0
@@ -1351,6 +1352,10 @@ MonoBehaviour:
   livesText: {fileID: 840294228}
   highScoreText: {fileID: 782130637}
   playerMovement: {fileID: 224424993}
+  loadButton: {fileID: 1526442355}
+  currentScore: 0
+  currentLives: 0
+  highScore: 0
 --- !u!4 &1235787545
 Transform:
   m_ObjectHideFlags: 0
@@ -1384,7 +1389,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1526442354
 RectTransform:
   m_ObjectHideFlags: 0

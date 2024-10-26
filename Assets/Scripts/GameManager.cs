@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public bool isPausing = false;
     [SerializeField] private UIManager uiManager;
     public static GameManager instance;
+    public bool isSaved = false;
 
     private void Start()
     {
@@ -51,6 +52,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("CurrentLives", uiManager.currentLives);
         PlayerPrefs.SetString("CurrentScene", SceneManager.GetActiveScene().name);
         PlayerPrefs.Save();
+        isSaved = true;
     }
 
     public void LoadData()
@@ -78,6 +80,11 @@ public class GameManager : MonoBehaviour
             isPausing = !isPausing;
         }
 
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            SaveData();
+            Debug.Log("Game Saved");
+        }
         if (isPausing == true) 
         {
             PauseMenuActivation();

@@ -7,16 +7,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class UIManager: MonoBehaviour 
+public class UIManager : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject canvas;
     [SerializeField] private GameManager gameManager;
-    [SerializeField] TMP_Text scoreText; 
-    [SerializeField] TMP_Text livesText; 
+    [SerializeField] TMP_Text scoreText;
+    [SerializeField] TMP_Text livesText;
     [SerializeField] TMP_Text highScoreText;
-    [SerializeField ]private PlayerMovement playerMovement;
-
+    [SerializeField] private PlayerMovement playerMovement;
+    [SerializeField] private Button loadButton;
 
     public int currentScore;
     public int currentLives;
@@ -24,7 +24,7 @@ public class UIManager: MonoBehaviour
 
     private void Start()
     {
-        
+
         LoadData();
         ResetUI();
     }
@@ -53,6 +53,17 @@ public class UIManager: MonoBehaviour
         SceneManager.LoadScene("InitialScreen");
     }
 
+    public void LoadGame()
+    {
+        if (GameManager.instance.isSaved == true)
+        {
+            loadButton.gameObject.SetActive(true);
+            SceneManager.LoadScene(PlayerPrefs.GetString("CurrentScene"));
+            LoadData();
+
+        }
+
+    }
     public void LoadLvl1()
     {
         SceneManager.LoadScene("Lvl1");
@@ -84,7 +95,7 @@ public class UIManager: MonoBehaviour
         if (currentScore > highScore)
         {
             highScoreText.text = "Best: " + currentScore;
-            PlayerPrefs.SetInt("HighScore", currentScore); 
+            PlayerPrefs.SetInt("HighScore", currentScore);
             PlayerPrefs.Save();
         }
     }
@@ -99,6 +110,6 @@ public class UIManager: MonoBehaviour
     public void ResetUI()
     {
         currentScore = 0;
-       
+
     }
 }
